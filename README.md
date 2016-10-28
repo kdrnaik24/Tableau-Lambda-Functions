@@ -3,7 +3,21 @@ This is the base set of code for building Tableau REST API functions that can be
 
 To make this work, clone this repo and write your Python script. If you want it to work independently, you are done once your code functions. If you want it to interact with the event or context that triggered it (like an S3 object being created), here's your [next set of reading](http://docs.aws.amazon.com/lambda/latest/dg/python-programming-model.html).
 
-Select everything in the folder, create a ZIP and upload it to Lambda. 
+Select everything in the folder, create a ZIP and upload it to Lambda.
+
+The most important part is getting your function handler right. Lambda needs to know what function to invoke when it gets triggered.
+
+### Here's the formula
+
+```
+[filename].function_handler
+```
+
+With the included sample, this would be 
+
+```
+sample.function_handler
+```
 
 That's it!
 
