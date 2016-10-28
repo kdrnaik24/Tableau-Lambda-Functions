@@ -53,7 +53,7 @@ This makes Lambda an excellent home for automation tasks.
 
 Many (but not all) of the initial automation tasks can be accomplished with Tableau's REST API. Python and Node can interact with API requests quite easily (Postman can generate the code you need - and then you parse it). 
 
-Python goes a step further. Bryant Howell (author of [Tableau and Behold](https://tableauandbehold.com) created a very nice library for interacting with the REST API. It's called [tableau_tools](https://github.com/bryantbhowell/tableau_tools). It uses a simple syntax for querying, adding and deleting. 
+Python goes a step further. Bryant Howell (author of [Tableau and Behold](https://tableauandbehold.com)) created a very nice library for interacting with the REST API. It's called [tableau_tools](https://github.com/bryantbhowell/tableau_tools). It uses a simple syntax for querying, adding and deleting. 
 
 #### Sign in and find all your site URLs
 
