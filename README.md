@@ -82,10 +82,29 @@ for user in users:
 
 Out of the gate, AWS supplies the basic Python libraries (similar to what you would find on a vanilla Linux machine). They also include all the AWS command line options ([boto](https://aws.amazon.com/sdk-for-python/)) so you can interact with all their capabilities.
 
-However, because tableau_tools is an external library, you need to package it with your function, otherwise it won't work. 
+However, because tableau_tools is an external library, you need to package it with your function, otherwise it won't work. The template contains all those dependencies, so you don't have to worry about them, including tableau_tools.
 
----
+If you can't download the repo yourself (for whatever reason), here's how  you can build your own template.
 
-## tableau_tools + Lambda
+On Linux (this will not work on windows), run the following script on an AWS Linux AMI
+```
+Launch an ec2 machine with Amazon Linux ami
+Run the following script to accumulate dependencies:
+set -e -o pipefail
+sudo yum -y upgrade
+sudo yum -y install gcc python-devel libxml2-devel libxslt-devel
 
-W
+virtualenv ~/env && cd ~/env && source bin/activate
+pip install lxml
+for dir in lib64/python2.7/site-packages \
+    lib/python2.7/site-packages
+do
+    if [ -d $dir ] ; then
+        pushd $dir; zip -r ~/deps.zip .; popd
+    fi
+done 
+```
+
+then run ```pip install tableau_tools -t \\path\to\folder\```
+
+That will accumulate everything you need in one place!
