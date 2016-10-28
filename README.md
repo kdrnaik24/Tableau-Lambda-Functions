@@ -1,7 +1,7 @@
 # Lambda Function Template
 This is the base set of code for building Tableau REST API functions that can be deployed with AWS Lambda.
 
-To make this work, clone this repo and write your Python script. If you want it to work independently, you are done once your code functions. If you want it to interact with the event or context that triggered it (like an S3 object being created), here's your [next set of reading](http://docs.aws.amazon.com/lambda/latest/dg/python-programming-model.html).
+To make this work, clone this repo, create a branch and write your Python script. If you want it to work independently, you are done once your code functions. If you want it to interact with the event or context that triggered it (like an S3 object being created), here's your [next set of reading](http://docs.aws.amazon.com/lambda/latest/dg/python-programming-model.html). When you are all done, push your new branch and submit a pull request.
 
 Select everything in the folder, create a ZIP and upload it to Lambda.
 
