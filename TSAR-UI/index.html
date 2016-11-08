@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TSAR by GTDG</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect.
+  -->
+  <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>TS</b>AR</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>T Server</b> Admin Rig</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="dist/img/avatar3.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">Tableau Guru Admin</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="dist/img/avatar3.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Tableau Guru Admin
+                  <small>Global Tableau Developer Group</small>
+                </p>
+              </li>
+
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/avatar3.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Tableau Guru Admin</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <li class="header">Tasks</li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class="treeview">
+          <a href="#"><i class="fa fa-sliders"></i> <span>Admin tasks</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Remove Unlicensed users</a></li>
+            <li><a href="#">Reassign content</a></li>
+            <li><a href="#">Backup, Logs, Cleanup</a></li>
+            <li><a href="#">Archive workbooks</a></li>
+            <li><a href="#">VizQL/Background ratio</a></li>
+            <li><a href="#">Restore from backup</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-bar-chart"></i> <span>Monitoring tasks</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Overview of tasks</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        TSAR Dashboard
+        <small>
+          <button class="btn btn-box-tool" id="btnRefreshUnlicensed" data-loading-text="Loading..." class="btn btn-flat" autocomplete="off">
+           <i class="fa fa-refresh"></i> Refresh
+         </button>
+         </small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Your Page Content Here -->
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Tableau Version</span>
+              <span class="info-box-number" id="product_version">8.6</span>
+              <span class="progress-description" id="api_version">2.3</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+
+        <!-- fix for small devices only -->
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-files-o"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Workbooks</span>
+              <span class="info-box-number" id="workbookscount">760</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Tableau users</span>
+              <span class="info-box-number" id="usercount">2,000</span>
+              <span class="progress-description" id="unlicensedusercount">unknown unlicensed users</span>
+    </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title">Administration tools</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          </div><!-- /.box-tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <!-- Table -->
+          <table id="unlicensedtable" class="table table-striped">
+          <thead>
+            <tr>
+              <th > Tool </th>
+              <th > Instructions</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+              <td>
+                <button id="btnBackgroundUp" data-loading-text="Increasing background tasks..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Backgrounder Up
+                </button>
+              </td>
+              <td>
+                Backgrounder Up will optimize Server for background tasks (Subscriptions &amp; Extracts).
+                <i class="fa fa-warning" style="color:red"></i>This will restart the Tableau server preventing users from connecting while it restarts.
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <button id="btnVisqlUp" data-loading-text="Changing VisQL ratios..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;VisQL Up
+                </button>
+              </td>
+              <td>
+                VizQL Up will optimize Server for user-tasks (interacting with content).
+                <i class="fa fa-warning" style="color:red"></i>This will restart the Tableau server preventing users from connecting while it restarts.
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <button id="btnRemoveUnlicensed" data-loading-text="Deleting..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Delete unlicensed users
+                </button>
+
+              </td>
+              <td>
+                Remove unlicensed users. Any content is associated with the admin user.
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <button id="btnSyncArchived" data-loading-text="Syncing..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Sync archived to S3
+                </button>
+              </td>
+              <td>
+                Sync archived workbooks to S3.
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <button id="btnCleanup" data-loading-text="Syncing..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Cleanup server
+                </button>
+              </td>
+              <td>
+                Clean up and restart server. <i class="fa fa-warning" style="color:red"></i>This will restart the Tableau server preventing users from connecting while it restarts.
+
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <button id="btnArchive" data-loading-text="Syncing..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Archive workbooks
+                </button>
+              </td>
+              <td>
+                Archive workbooks.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="btnBackupServer" data-loading-text="Syncing..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Backup server
+                </button>
+                <br /><small>Not implemented</small>
+              </td>
+              <td>
+                Backup server configuration to S3.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button id="btnRestoreServer" data-loading-text="Syncing..." class="btn btn-flat" autocomplete="off">
+                 <i class="fa fa-wrench"></i>&nbsp;Restore server
+                </button>
+                <br />
+                <small>Not implemented</small>
+              </td>
+              <td>
+                Restore server configuration from S3.
+              </td>
+            </tr>
+          </tbody>
+        </table> <!-- #unlicensedtable -->
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+      <div class="box box-default">
+        <div class="box-header with-border">
+          <h3 class="box-title">Unlicensed users</h3>
+          <div class="box-tools pull-right">
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+          </div><!-- /.box-tools -->
+        </div><!-- /.box-header -->
+        <div class="box-body">
+          <!-- Table -->
+          <table id="unlicensedtable" class="table table-striped">
+          <thead>
+            <tr>
+              <th data-field="name"> Username </th>
+              <th data-field="site"> Site </th>
+              <th data-field="siteRole">Site Role</th>
+            </tr>
+          </thead>
+          <tbody id="unlicensedbody">
+
+          </tbody>
+        </table> <!-- #unlicensedtable -->
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Tableau Server Admin Rig
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Global Tableau Developer Group</a>.</strong> MIT License.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Credentials</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">AWS credentials</h4>
+                <input type="text" name="accesskey" class="form-control" placeholder="AWS Access key...">
+                <p>AWS Access Key</p>
+                <input type="text" name="secretkey" class="form-control" placeholder="AWS Secret key...">
+                <p>AWS Secret Key</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<!-- API gateway client -->
+<script type="text/javascript" src="apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+<script type="text/javascript" src="apiGateway-js-sdk/apigClient.js"></script>
+
+<!-- Scripts for this page/application -->
+<script src="tsar.js"></script>
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+</html>
