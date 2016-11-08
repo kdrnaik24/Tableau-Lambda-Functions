@@ -17,7 +17,7 @@ def backup_func(event,context):
         DocumentName = 'AWS-RunPowerShellScript',
         Parameters = {
             'commands':[
-                '$object = Get-S3Object -BucketName hackathon-tableaubackup -Key backups | Sort-Object LastModified -Descending | Select-Object -First 1 | select Key `n Read-S3Object -BucketName hackathon-tableaubackup -Key $object.key -File C:\Users\Administrator\Backup\Server\backup.tsbak `n tabadmin restore C:\Users\Administrator\Backup\Server\backup.tsbak'
+                '$object = Get-S3Object -BucketName hackathon-tableaubackup -Key backups | Sort-Object LastModified -Descending | Select-Object -First 1 | select Key `n Read-S3Object -BucketName hackathon-tableaubackup -Key $object.key -File C:\Users\Administrator\Backup\Server\backup.tsbak `n tabadmin restore C:\Users\Administrator\Backup\Server\backup.tsbak `n tabadmin start'
             ]
         }
     )
