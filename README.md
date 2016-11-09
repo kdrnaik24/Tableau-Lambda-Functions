@@ -49,7 +49,31 @@ This makes Lambda an excellent home for automation tasks.
 
 ---
 
-### Tableau Rest API
+### Deploying to AWS
+
+Before you do anything, you need to make sure that your Tableau Server (and workers) have a role affiliated with them. What is a Role? It's a set of permissions that are attached to a Server or application or AWS function that allows it to interact without you needing to pass around Access and Secret Keys. 
+
+To create a Role, go to AWS IAM -> Roles -> Create New Roles -> Give it a Name
+
++ Scroll to the botton and select "Amazon EC2"
++ Check **AmazonSSMFullAccess**
++ Check **AmazonS3FullAccess** 
+
+You'll also need a role for your Lambda functions to run. Same approach as above, except make sure you have **AWSLambdaFullAccess**, **AmazonEC2RoleforSSM**, **AmazonS3FullAccess**, **AmazonSSMFullAccess.**
+
+Some of those might be overkill, but you can always roll them back.
+
+Now that you have your roles, it's time for your functions. Most of our Lambda functions can be written in-line. You can copy and paste the .py files from our repository into your function.
+
+In the case of the larger REST API functions - we use tableau_tools as our REST interface. This is a much more efficient library (especially for XML parsing) than the recently released tableauserverclient. Because this is a third party tool, you'll need to include it with its dependencies (see below).
+
+To deploy these, select them all and ZIP them up. Take this ZIP file and upload that during your function creation.
+
+You'll need S3 buckets for your logs, backups, and workbooks. Create those through your S3 interface, or just make one and adjust your code accordingly.
+
+---
+
+### Tableau Rest API and other code samples
 
 Many (but not all) of the initial automation tasks can be accomplished with Tableau's REST API. Python and Node can interact with API requests quite easily (Postman can generate the code you need - and then you parse it). 
 
@@ -78,7 +102,7 @@ for user in users:
 
 ---
 
-## Creating Lambda functions
+## Creating Lambda functions with external dependencies
 
 Out of the gate, AWS supplies the basic Python libraries (similar to what you would find on a vanilla Linux machine). They also include all the AWS command line options ([boto](https://aws.amazon.com/sdk-for-python/)) so you can interact with all their capabilities.
 
@@ -108,3 +132,7 @@ done
 then run ```pip install tableau_tools -t \\path\to\folder\```
 
 That will accumulate everything you need in one place!
+
+---
+
+GTDG welcomes pull requests - so feel free to fork, branch, and send us new code!!!

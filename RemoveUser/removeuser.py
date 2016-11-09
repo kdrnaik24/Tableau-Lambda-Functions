@@ -3,7 +3,7 @@ from tableau_tools import *
 from tableau_tools.tableau_rest_api import *
 
 def remove_user(event, context):
-    t = TableauRestApiConnection(u"http://ec2-35-161-7-194.us-west-2.compute.amazonaws.com", u"user", u"password", site_content_url=u"")
+    t = TableauRestApiConnection(u"http://ec2-35-163-18-44.us-west-2.compute.amazonaws.com", u"admin", u"password", site_content_url=u"")
     t.signin() 
     print('Signed in')
     urls = t.query_all_site_content_urls()
@@ -11,7 +11,7 @@ def remove_user(event, context):
     print(urls)
 
     for url in urls:
-        t = TableauRestApiConnection(u"http://ec2-35-161-7-194.us-west-2.compute.amazonaws.com", u"user", u"password", site_content_url=url)
+        t = TableauRestApiConnection(u"http://ec2-35-163-18-44.us-west-2.compute.amazonaws.com", u"admin", u"password", site_content_url=url)
         t.signin()
         print('Signed in to ' + url)
         unlicensed = []
